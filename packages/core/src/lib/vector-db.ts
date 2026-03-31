@@ -3,7 +3,7 @@ import path from "path";
 
 // Pure JavaScript Vector Database for FAQ RAG (Zero-Native-Dependencies)
 // Persistent JSON store for robust local deployment
-const DB_FILE = path.join(process.cwd(), "../../packages/core/prisma/vector.db.json");
+const DEFAULT_DB_FILE = path.join(process.cwd(), "../../packages/core/prisma/vector.db.json");
 
 function cosineSimilarity(vecA: number[], vecB: number[]) {
   let dotProduct = 0;
@@ -20,17 +20,19 @@ function cosineSimilarity(vecA: number[], vecB: number[]) {
 
 export class VectorStore {
   private data: any[] = [];
+  private dbPath: string;
 
-  constructor() {
+  constructor(dbPath: string = DEFAULT_DB_FILE) {
+    this.dbPath = dbPath;
     this.load();
   }
 
   private load() {
     try {
-      if (fs.existsSync(DB_FILE)) {
-        const raw = fs.readFileSync(DB_FILE, "utf-8");
+      if (fs.existsSync(this.dbPath)) {
+        const raw = fs.readFileSync(this.dbPath, "utf-8");
         this.data = JSON.parse(raw);
-        console.log(`[VectorStore] Loaded ${this.data.length} embeddings.`);
+        console.log(`[VectorStore] Loaded ${this.data.length} embeddings from ${this.dbPath}`);
       }
     } catch (e) {
       console.error("[VectorStore] Failed to load:", e);
@@ -40,9 +42,9 @@ export class VectorStore {
 
   private save() {
     try {
-      const dir = path.dirname(DB_FILE);
+      const dir = path.dirname(this.dbPath);
       if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-      fs.writeFileSync(DB_FILE, JSON.stringify(this.data, null, 2));
+      fs.writeFileSync(this.dbPath, JSON.stringify(this.data, null, 2));
     } catch (e) {
       console.error("[VectorStore] Failed to save:", e);
     }
