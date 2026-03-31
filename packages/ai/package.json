@@ -1,0 +1,13 @@
+{
+  "name": "@archi-legal/ai",
+  "version": "1.0.0",
+  "description": "AI components, LLM integrations and Vector Database handlers",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "ai": "^3.0.0"
+  }
+}

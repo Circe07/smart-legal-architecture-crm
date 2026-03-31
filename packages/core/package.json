@@ -1,0 +1,29 @@
+{
+  "name": "@archi-legal/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared server actions and core logic",
+  "exports": {
+    "./actions/*": "./src/actions/*.ts",
+    "./lib/*": "./src/lib/*.ts",
+    "./tenant-context": "./src/lib/tenant-context.ts",
+    "./cache-tags": "./src/lib/cache-tags.ts",
+    "./inngest": "./src/lib/inngest.ts",
+    "./inngest-functions": "./src/lib/inngest-functions.ts",
+    "./gemini": "./src/lib/gemini.ts",
+    "./vector-db": "./src/lib/vector-db.ts",
+    "./rag-logic": "./src/lib/rag-logic.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.54",
+    "@google/generative-ai": "^0.24.1",
+    "ai": "^3.4.33",
+    "inngest": "^4.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "tsx": "^4.21.0"
+  }
+}

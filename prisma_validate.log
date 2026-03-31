@@ -1,0 +1,177 @@
+node.exe : npm warn 
+Unknown project config 
+"public-hoist-pattern". 
+This will stop working in 
+the next major version of 
+npm.
+At C:\Program 
+Files\nodejs\npx.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (n  
+  pm warn Unknow...vers   
+ ion of npm.:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+npm warn Unknown project 
+config 
+"shamefully-hoist". This 
+will stop working in the 
+next major version of npm.
+prisma:cli:bin Failed to 
+initialize the command 
+state: Error: ENOENT: no 
+such file or directory, 
+open 'C:\Users\alehw\AppDa
+ta\Roaming\prisma-nodejs\C
+onfig\commands.json' 
++6219ms
+prisma:config:loadConfigFr
+omFile Config file loaded 
+in 338.14ms +4574ms
+prisma:config:loadConfigFr
+omFile No config file 
+found in the current 
+working directory 
+C:\workspace\New folder 
+(3) +1ms
+prisma:engines binaries 
+to download schema-engine 
++6541ms
+prisma:getSchema Reading 
+schema from single file 
+C:\workspace\New folder (3
+)\packages\db\prisma\schem
+a.prisma +358ms
+prisma:getSchema Reading 
+schema from single file 
+C:\workspace\New folder (3
+)\packages\db\prisma\schem
+a.prisma +2ms
+prisma:getConfig Using 
+getConfig Wasm +50ms
+prisma:cli:checkpoint 
+Error from 
+tryToReadDataFromSchema() 
+while processing the 
+schema. This is not a 
+fatal error. It will 
+continue without the 
+processed data. +53ms
+prisma:cli:checkpoint {
+  "name": "GetConfigError"
+} +1ms
+prisma:cli:checkpoint runC
+heckpointClientCheck(): 
+Execution time for 
+getting info: 
+118.45949999999993 ms +5ms
+prisma:getSchema Reading 
+schema from single file 
+C:\workspace\New folder (3
+)\packages\db\prisma\schem
+a.prisma +31ms
+prisma:cli:checkpoint runC
+heckpointClientCheck(): 
+Execution time for "await 
+checkpoint.check(data)": 
+48.33899999999994 ms +21ms
+Prisma schema loaded from 
+packages\db\prisma\schema.
+prisma.
+prisma:validate Using 
+validate Wasm +30ms
+prisma:validate error of 
+type "wasm-error" in 
+validateWasm:
+ {
+  "reason": "(validate 
+wasm)",
+  "error": {}
+} +6ms
+
+Error: ValidateError: 
+Prisma schema validation 
+- (validate wasm)
+Error code: P1012
+[1;91merror[0m: [1mThe 
+datasource property `url` 
+is no longer supported in 
+schema files. Move 
+connection URLs for 
+Migrate to 
+`prisma.config.ts` and 
+pass either `adapter` for 
+a direct database 
+connection or 
+`accelerateUrl` for 
+Accelerate to the 
+`PrismaClient` 
+constructor. See https://p
+ris.ly/d/config-datasource
+ and https://pris.ly/d/pri
+sma7-client-config[0m
+  [1;94m-->[0m  [4mpack
+ages\db\prisma\schema.pris
+ma:7[0m
+[1;94m   | [0m
+[1;94m 6 | [0m  
+provider = "sqlite"
+[1;94m 7 | [0m  
+[1;91murl      = 
+"file:./dev.db"[0m
+[1;94m   | [0m
+
+Validation Error Count: 1
+[Context: validate]
+
+Prisma CLI Version : 7.6.0
+    at C:\workspace\New 
+folder (3)\node_modules\.p
+npm\prisma@7.6.0_@types+re
+act-d_6ca0bc51d47e415c030f
+082a6647b9ea\node_modules\
+prisma\build\index.js:222:
+689
+    at e.with 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:163:41043)
+    at Oy 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:222:452)
+    at e.parse 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:4700:483)
+    at async e.parse 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:1070:2319)
+    at async Znr 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:4703:136)

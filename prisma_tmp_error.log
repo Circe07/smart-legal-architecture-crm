@@ -1,0 +1,187 @@
+node.exe : npm warn 
+Unknown project config 
+"public-hoist-pattern". 
+This will stop working in 
+the next major version of 
+npm.
+At C:\Program 
+Files\nodejs\npx.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (n  
+  pm warn Unknow...vers   
+ ion of npm.:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+npm warn Unknown project 
+config 
+"shamefully-hoist". This 
+will stop working in the 
+next major version of npm.
+prisma:cli:bin Failed to 
+initialize the command 
+state: Error: ENOENT: no 
+such file or directory, 
+open 'C:\Users\alehw\AppDa
+ta\Roaming\prisma-nodejs\C
+onfig\commands.json' 
++3922ms
+prisma:config:loadConfigFr
+omFile Config file loaded 
+in 317.74ms +3214ms
+prisma:config:loadConfigFr
+omFile No config file 
+found in the current 
+working directory 
+C:\workspace\New folder 
+(3)\tmp-prisma +0ms
+prisma:getSchema Checking 
+existence of 
+C:\workspace\New folder (3
+)\tmp-prisma\schema.prisma
+ +329ms
+prisma:getSchema Reading 
+schema from single file 
+C:\workspace\New folder (3
+)\tmp-prisma\schema.prisma
+ +0ms
+prisma:getSchema Checking 
+existence of 
+C:\workspace\New folder (3
+)\tmp-prisma\schema.prisma
+ +1ms
+prisma:getSchema Reading 
+schema from single file 
+C:\workspace\New folder (3
+)\tmp-prisma\schema.prisma
+ +0ms
+prisma:engines binaries 
+to download schema-engine 
++4234ms
+prisma:getConfig Using 
+getConfig Wasm +13ms
+prisma:cli:checkpoint 
+Error from 
+tryToReadDataFromSchema() 
+while processing the 
+schema. This is not a 
+fatal error. It will 
+continue without the 
+processed data. +39ms
+prisma:cli:checkpoint {
+  "name": "GetConfigError"
+} +0ms
+prisma:cli:checkpoint runC
+heckpointClientCheck(): 
+Execution time for 
+getting info: 
+54.48080000000027 ms +1ms
+prisma:getSchema Checking 
+existence of 
+C:\workspace\New folder (3
+)\tmp-prisma\schema.prisma
+ +131ms
+prisma:getSchema Reading 
+schema from single file 
+C:\workspace\New folder (3
+)\tmp-prisma\schema.prisma
+ +0ms
+Prisma schema loaded from 
+schema.prisma.
+prisma:getConfig Using 
+getConfig Wasm +2ms
+Error: GetConfigError: 
+Prisma schema validation 
+- (get-config wasm)
+Error code: P1012
+error: The datasource 
+property `url` is no 
+longer supported in 
+schema files. Move 
+connection URLs for 
+Migrate to 
+`prisma.config.ts` and 
+pass either `adapter` for 
+a direct database 
+connection or 
+`accelerateUrl` for 
+Accelerate to the 
+`PrismaClient` 
+constructor. See https://p
+ris.ly/d/config-datasource
+ and https://pris.ly/d/pri
+sma7-client-config
+  -->  schema.prisma:7
+   | 
+ 6 |   provider = "sqlite"
+ 7 |   url      = 
+"file:./dev.db"
+   | 
+
+Validation Error Count: 1
+[Context: getConfig]
+
+Prisma CLI Version : 7.6.0
+    at C:\workspace\New 
+folder (3)\node_modules\.p
+npm\prisma@7.6.0_@types+re
+act-d_6ca0bc51d47e415c030f
+082a6647b9ea\node_modules\
+prisma\build\index.js:203:
+1073
+    at e.with 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:163:41043)
+    at Cy 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:203:1043)
+    at iD 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:222:1318)
+    at Yn 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:222:1109)
+    at async e.parse 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:586:285)
+    at async e.parse 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:1070:2319)
+    at async Znr 
+(C:\workspace\New folder (
+3)\node_modules\.pnpm\pris
+ma@7.6.0_@types+react-d_6c
+a0bc51d47e415c030f082a6647
+b9ea\node_modules\prisma\b
+uild\index.js:4703:136)

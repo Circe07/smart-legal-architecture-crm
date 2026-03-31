@@ -1,0 +1,231 @@
+node.exe : 
+prisma:cli:bin Failed 
+to initialize the 
+command state: Error: 
+ENOENT: no such file 
+or directory, open 'C:\
+Users\alehw\AppData\Roa
+ming\prisma-nodejs\Conf
+ig\commands.json' 
++3992ms
+At C:\Users\alehw\AppDa
+ta\Roaming\npm\pnpm.ps1
+:24 char:5
++     & "node$exe"  "$b
+asedir/node_modules/pnp
+m/bin/pnpm.cjs" $args
++     ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : 
+NotSpecified: (p    
+risma:cli:bin ...s.js  
+  on' +3992ms:String) 
+[    ], RemoteException
+    + 
+FullyQualifiedError    
+Id : NativeCommandErr  
+  or
+ 
+prisma:config:defineCon
+fig [default]: '{\n  
+"loadedFromFile": 
+null\n}' +2863ms
+prisma:config:defineCon
+fig [config.schema]: 
+'prisma/schema.prisma' 
++1ms
+prisma:config:defineCon
+fig 
+[config.datasource]: 
+'{\n  "url": 
+"file:./dev.db"\n}' 
++0ms
+prisma:config:defineCon
+fig 
+[config.migrations]: 
+'{\n  "path": "prisma/m
+igrations"\n}' +0ms
+prisma:config:loadConfi
+gFromFile Config file 
+loaded in 393.96ms +2ms
+prisma:config:PrismaCon
+fig Parsing 
+PrismaConfigInternal: 
+'{\n' +
+  '  "loadedFromFile": 
+null,\n' +
+  '  "schema": "prisma/
+schema.prisma",\n' +
+  '  "datasource": 
+{\n' +
+  '    "url": 
+"file:./dev.db"\n' +
+  '  },\n' +
+  '  "migrations": 
+{\n' +
+  '    "path": 
+"prisma/migrations"\n' 
++
+  '  }\n' +
+  '}' +7ms
+prisma:config:PrismaCon
+fig Short-circuit: 
+input is already a 
+PrismaConfigInternal 
+object +2ms
+Loaded Prisma config 
+from prisma.config.ts.
+
+prisma:engines 
+binaries to download 
+schema-engine +4380ms
+prisma:getSchema 
+Reading schema from 
+single file 
+C:\workspace\New 
+folder (3)\packages\db\
+prisma\schema.prisma 
++418ms
+prisma:getSchema 
+Reading schema from 
+single file 
+C:\workspace\New 
+folder (3)\packages\db\
+prisma\schema.prisma 
++1ms
+prisma:getConfig Using 
+getConfig Wasm +42ms
+prisma:cli:checkpoint 
+Error from tryToReadDat
+aFromSchema() while 
+processing the schema. 
+This is not a fatal 
+error. It will 
+continue without the 
+processed data. +51ms
+prisma:cli:checkpoint {
+  "name": 
+"GetConfigError"
+} +1ms
+prisma:cli:checkpoint r
+unCheckpointClientCheck
+(): Execution time for 
+getting info: 
+101.79999999999927 ms 
++0ms
+prisma:getSchema 
+Reading schema from 
+single file 
+C:\workspace\New 
+folder (3)\packages\db\
+prisma\schema.prisma 
++23ms
+Prisma schema loaded 
+from 
+prisma\schema.prisma.
+prisma:getConfig Using 
+getConfig Wasm +4ms
+Error: GetConfigError: 
+Prisma schema 
+validation - 
+(get-config wasm)
+Error code: P1012
+error: The datasource 
+property `url` is no 
+longer supported in 
+schema files. Move 
+connection URLs for 
+Migrate to 
+`prisma.config.ts` and 
+pass either `adapter` 
+for a direct database 
+connection or 
+`accelerateUrl` for 
+Accelerate to the 
+`PrismaClient` 
+constructor. See https:
+//pris.ly/d/config-data
+source and https://pris
+.ly/d/prisma7-client-co
+nfig
+  -->  
+prisma\schema.prisma:7
+   | 
+ 6 |   provider = 
+"sqlite"
+ 7 |   url      = 
+"file:./dev.db"
+   | 
+
+Validation Error 
+Count: 1
+[Context: getConfig]
+
+Prisma CLI Version : 
+7.6.0
+    at 
+C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:203:1073
+    at e.with 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:163:41043)
+    at Cy 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:203:1043)
+    at iD 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:222:1318)
+    at Yn 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:222:1109)
+    at async e.parse 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:586:285)
+    at async e.parse 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:1070:2319)
+    at async Znr 
+(C:\workspace\New 
+folder (3)\node_modules
+\.pnpm\prisma@7.6.0_@ty
+pes+react-d_6ca0bc51d47
+e415c030f082a6647b9ea\n
+ode_modules\prisma\buil
+d\index.js:4703:136)

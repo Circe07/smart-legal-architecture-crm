@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Firm {
+  id        String    @id @default(cuid())
+  name      String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  clients   Client[]
+  cases     Case[]
+  messages  Message[]
+}
+
+model Client {
+  id             String    @id @default(cuid())
+  whatsappNumber String?
+  firmId         String
+  firm           Firm      @relation(fields: [firmId], references: [id])
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  cases          Case[]
+  messages       Message[]
+}
+
+model Case {
+  id        String    @id @default(cuid())
+  firmId    String
+  firm      Firm      @relation(fields: [firmId], references: [id])
+  clientId  String
+  client    Client    @relation(fields: [clientId], references: [id])
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  messages  Message[]
+}
+
+model Message {
+  id             String   @id @default(cuid())
+  body           String
+  direction      String
+  author         String
+  sentiment      String?
+  fromNumber     String?
+  toNumber       String?
+  conversationId String?
+  channel        String?
+  metadata       Json?
+  firmId         String
+  firm           Firm     @relation(fields: [firmId], references: [id])
+  clientId       String?
+  client         Client?  @relation(fields: [clientId], references: [id])
+  caseId         String?
+  case           Case?    @relation(fields: [caseId], references: [id])
+  createdAt      DateTime @default(now())
+}
