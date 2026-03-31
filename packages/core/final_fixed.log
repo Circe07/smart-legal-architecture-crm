@@ -1,0 +1,46 @@
+﻿node.exe : 
+C:\workspace\New folder (3
+)\packages\core\src\lib\ve
+ctor-db.ts:4
+At C:\Users\alehw\AppData\
+Roaming\npm\pnpm.ps1:24 
+char:5
++     & "node$exe"  "$base
+dir/node_modules/pnpm/bin/
+pnpm.cjs" $args
++     ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (C  
+  :\workspace\Ne...\vec   
+ tor-db.ts:4:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+const __dirname = 
+path.dirname(__filename);
+                  ^
+
+
+ReferenceError: path is 
+not defined
+    at <anonymous> 
+(C:\workspace\New folder (
+3)\packages\core\src\lib\v
+ector-db.ts:4:19)
+    at ModuleJob.run (node
+:internal/modules/esm/modu
+le_job:274:25)
+    at async onImport.trac
+ePromise.__proto__ (node:i
+nternal/modules/esm/loader
+:644:26)
+    at async asyncRunEntry
+PointWithESMLoader (node:i
+nternal/modules/run_main:1
+17:5)
+
+Node.js v22.16.0

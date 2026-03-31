@@ -1,0 +1,11 @@
+﻿[
+  'apiKey',
+  '_requestOptions',
+  'model',
+  'generationConfig',
+  'safetySettings',
+  'tools',
+  'toolConfig',
+  'systemInstruction',
+  'cachedContent'
+]

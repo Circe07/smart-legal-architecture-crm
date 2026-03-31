@@ -1,9 +1,8 @@
-import fs from "fs";
-import path from "path";
+import { fileURLToPath } from 'url';
 
-// Pure JavaScript Vector Database for FAQ RAG (Zero-Native-Dependencies)
-// Persistent JSON store for robust local deployment
-const DEFAULT_DB_FILE = path.join(process.cwd(), "../../packages/core/prisma/vector.db.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DEFAULT_DB_FILE = path.join(__dirname, "../../prisma/vector.db.json");
 
 function cosineSimilarity(vecA: number[], vecB: number[]) {
   let dotProduct = 0;

@@ -22,6 +22,7 @@
     "@google/generative-ai": "^0.24.1",
     "ai": "^3.4.33",
     "inngest": "^4.1.0",
+    "node-fetch": "^3.3.2",
     "zod": "^4.3.6"
   },
   "devDependencies": {

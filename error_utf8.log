@@ -1,0 +1,57 @@
+﻿node.exe : npm warn 
+Unknown project config 
+"public-hoist-pattern". 
+This will stop working in 
+the next major version of 
+npm.
+At C:\Program 
+Files\nodejs\npx.ps1:29 
+char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (n  
+  pm warn Unknow...vers   
+ ion of npm.:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+npm warn Unknown project 
+config 
+"shamefully-hoist". This 
+will stop working in the 
+next major version of npm.
+C:\workspace\New folder (3
+)\packages\core\src\lib\ge
+mini.ts:4
+  throw new Error("GOOGLE_
+GENERATIVE_AI_API_KEY 
+environment variable is 
+not defined");
+        ^
+
+
+Error: GOOGLE_GENERATIVE_A
+I_API_KEY environment 
+variable is not defined
+    at <anonymous> 
+(C:\workspace\New folder (
+3)\packages\core\src\lib\g
+emini.ts:4:9)
+    at ModuleJob.run (node
+:internal/modules/esm/modu
+le_job:274:25)
+    at async onImport.trac
+ePromise.__proto__ (node:i
+nternal/modules/esm/loader
+:644:26)
+    at async asyncRunEntry
+PointWithESMLoader (node:i
+nternal/modules/run_main:1
+17:5)
+
+Node.js v22.16.0
