@@ -13,7 +13,9 @@
     "./inngest-functions": "./src/lib/inngest-functions.ts",
     "./gemini": "./src/lib/gemini.ts",
     "./vector-db": "./src/lib/vector-db.ts",
-    "./rag-logic": "./src/lib/rag-logic.ts"
+    "./rag-logic": "./src/lib/rag-logic.ts",
+    "./whatsapp-client": "./src/lib/whatsapp-client.ts",
+    "./event-emitter": "./src/lib/event-emitter.ts"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.54",

@@ -14,7 +14,7 @@ const triageSchema = z.object({
   confidenceScore: z.number().min(0).max(1),
 });
 
-export async function runTriageAgent(messageBody: string) {
+export async function runTriageAgent(messageBody: string, historyContext: string = "") {
   // 1. Get context from our local RAG (Faq Knowledge Base)
   const context = await getContextFromKnowledgeBase(messageBody);
 
@@ -23,13 +23,16 @@ export async function runTriageAgent(messageBody: string) {
     model: triageModel as any,
     schema: triageSchema,
     system: `Eres el cerebro de triaje de Archi-Legal, un despacho de abogados especializado en arquitectura.
-    Tu objetivo es analizar los mensajes entrantes de clientes y decidir si pueden ser respondidos automáticamente basándote SÓLO en el CONTEXTO proporcionado.
+    Tu objetivo es analizar los mensajes entrantes de clientes y decidir si pueden ser respondidos automáticamente basándote SÓLO en el CONTEXTO proporcionado y en el HISTORIAL de la conversación.
     
     REGLA DE ORO "ZERO-HALLUCINATION": 
     - Si el CONTEXTO no responde CLARAMENTE a todos los puntos del mensaje, pon autoReplyPossible: false y requiresHumanAction: true.
     - El nivel de confianza corporal (confidenceScore) debe ser bajo si los datos no son exactos.
     - Si detectas frustración o mala actitud, pon urgency: 5 y requiresHumanAction: true.
     - Identifica documentos que el cliente menciona pero que parecen faltar según su consulta.
+
+    HISTORIAL DE LA CONVERSACIÓN (Últimos mensajes):
+    ${historyContext || "No hay mensajes anteriores recientes."}
 
     CONTEXTO DE FAQs:
     ${context || "No se ha encontrado contexto relevante en la base de datos de conocimientos."}
